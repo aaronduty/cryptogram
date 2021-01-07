@@ -2,21 +2,21 @@ require 'test_helper'
 
 class CryptogramControllerTest < ActionDispatch::IntegrationTest
   test "Get new Cryptogram" do
-    get cryptogram_url
+    get api_cryptogram_url
     
     assert_response :success
     assert_not_equal @response.body, ""
   end
 
   test "Get existing Cryptogram" do
-    get cryptogram_url, params: { "identifier" => "si0W7J/mDN8PXimgtWggRQVJtC2IvdJk7fCoTMVPpXs=" }
+    get api_cryptogram_url, params: { "identifier" => "si0W7J/mDN8PXimgtWggRQVJtC2IvdJk7fCoTMVPpXs=" }
     
     assert_response :success
     assert_not_equal @response.body, ""
   end
 
   test "Check solution - success" do
-    post cryptogram_check_url, params: {
+    post api_cryptogram_check_url, params: {
       "identifier" => "si0W7J/mDN8PXimgtWggRQVJtC2IvdJk7fCoTMVPpXs=",
       "solution" => "PUT THE LIME IN THE COCONUT AND SHAKE IT ALL UP"
     }
@@ -30,7 +30,7 @@ class CryptogramControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "Check solution - fail" do
-    post cryptogram_check_url, params: {
+    post api_cryptogram_check_url, params: {
       "identifier" => "si0W7J/mDN8PXimgtWggRQVJtC2IvdJk7fCoTMVPpXs=",
       "solution" => "BLA HBL AHBL"
     }
