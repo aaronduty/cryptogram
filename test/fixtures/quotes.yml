@@ -1,0 +1,7 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  content: PUT THE LIME IN THE COCONUT AND SHAKE IT ALL UP
+
+two:
+  content: WHO LET THE DOGS OUT
