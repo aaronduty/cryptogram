@@ -1,4 +1,5 @@
-class CryptogramController < ApplicationController
+class CryptogramController < ApplicationApiController
+  
   def show
     cryptogram = nil
     if cryptogram_params.key?("identifier")
