@@ -1,4 +1,4 @@
-class CryptogramController < ApplicationApiController
+class Api::CryptogramController < Api::ApplicationApiController
   
   def show
     cryptogram = nil
