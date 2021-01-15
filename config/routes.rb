@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   # api endpoints
   namespace :api do
-    get '/cryptogram', to: 'cryptogram#show'
-    post '/cryptogram/check', to: 'cryptogram#check'
+    get '/cryptograms(/:identifier)', to: 'cryptogram#show', as: 'cryptograms'
+    post '/cryptograms/check', to: 'cryptogram#check'
   end
 
   root "home#index"
