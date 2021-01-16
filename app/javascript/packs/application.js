@@ -16,6 +16,5 @@ import Cryptogram from "../components/Cryptogram";
 
 window.onload = () => {
   const rootElement = document.getElementById("root");
-  console.log(rootElement);
   ReactDOM.render(<Cryptogram text="VCOJLKLQ TKBARNB NLWCJPBOLWKLQ KP VOXRJ VRPB" />, rootElement);
 }
