@@ -1,0 +1,9 @@
+.Cryptogram {
+  background: #dddddd;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 0.75rem;
+  width: 90%;
+}
