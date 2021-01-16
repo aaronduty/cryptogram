@@ -6,3 +6,16 @@
 import Rails from "@rails/ujs"
 
 Rails.start()
+
+import "../../assets/stylesheets/application.css";
+
+import React from "react";
+import ReactDOM from "react-dom";
+
+import Cryptogram from "../components/Cryptogram";
+
+window.onload = () => {
+  const rootElement = document.getElementById("root");
+  console.log(rootElement);
+  ReactDOM.render(<Cryptogram text="VCOJLKLQ TKBARNB NLWCJPBOLWKLQ KP VOXRJ VRPB" />, rootElement);
+}
